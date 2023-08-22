@@ -11,18 +11,20 @@ def dividir(a, b):
 def multiplicar(a, b):
     return a*b
 
+# Boas Vindas
+print('''
+    App desenvolvido por Vitor Castro
+
+    Seja Bem vindo(a) a Calculadora,
+    Nesse programa você poderá solucionar cálculos
+    simples de matemática!
+
+    ''')
+
 # Programa
 programa = True
 while programa == True:
-    # Boas Vindas
-    print('''
-        App desenvolvido por Vitor Castro
 
-        Seja Bem vindo(a) a Calculadora,
-        Nesse programa você poderá solucionar cálculos
-        simples de matemática!
-
-    ''')
 
     operador = input('''
         
@@ -44,7 +46,6 @@ while programa == True:
         n1 = int(input('''
             Qual seu primeiro Número?
         '''))
-    
         n2 = int(input('''
             Qual seu segundo Número?
         '''))
@@ -52,16 +53,51 @@ while programa == True:
         resultado = int(somar(n1, n2))
 
         print(f'''
-            O resultado entre {n1} + {n2} = {resultado} 
+            O resultado de {n1} + {n2} = {resultado} 
         ''')
     elif operador == 'b':
-        resultado = subtrair()
+        n1 = int(input('''
+            Qual seu primeiro Número?
+        '''))
+        n2 = int(input('''
+            Qual seu segundo Número?
+        '''))
+        
+        resultado = subtrair(n1, n2)
+        
+        print(f'''
+            O resultado de {n1} - {n2} = {resultado} 
+        ''')
+
 
     elif operador == 'c':
-        resultado = dividir()
+        n1 = int(input('''
+            Qual seu primeiro Número?
+        '''))
+        n2 = int(input('''
+            Qual seu segundo Número?
+        '''))
+
+        resultado = dividir(n1, n2)
+
+        print(f'''
+            O resultado de {n1} / {n2} = {resultado} 
+        ''')
+
 
     elif operador == 'd':
-        resultado = multiplicar()
+        n1 = int(input('''
+            Qual seu primeiro Número?
+        '''))
+        n2 = int(input('''
+            Qual seu segundo Número?
+        '''))
+
+        resultado = multiplicar(n1, n2)
+        
+        print(f'''
+            O resultado de {n1} x {n2} = {resultado} 
+        ''')
 
 
     # Final
