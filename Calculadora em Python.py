@@ -1,3 +1,6 @@
+# Importações
+from time import sleep
+
 # Funções
 def somar(a, b):
     return a+b
@@ -19,7 +22,9 @@ print('''
     Nesse programa você poderá solucionar cálculos
     simples de matemática!
 
-    ''')
+''')
+
+sleep(3)
 
 # Programa
 programa = True
@@ -53,7 +58,7 @@ while programa == True:
         resultado = int(somar(n1, n2))
 
         print(f'''
-            O resultado de {n1} + {n2} = {resultado} 
+            O Resultado De {n1} + {n2} = {resultado} 
         ''')
     elif operador == 'b':
         n1 = int(input('''
@@ -66,7 +71,7 @@ while programa == True:
         resultado = subtrair(n1, n2)
         
         print(f'''
-            O resultado de {n1} - {n2} = {resultado} 
+            O Resultado De {n1} - {n2} = {resultado} 
         ''')
 
 
@@ -81,7 +86,7 @@ while programa == True:
         resultado = dividir(n1, n2)
 
         print(f'''
-            O resultado de {n1} / {n2} = {resultado} 
+            O Resultado De {n1} / {n2} = {resultado} 
         ''')
 
 
@@ -96,10 +101,10 @@ while programa == True:
         resultado = multiplicar(n1, n2)
         
         print(f'''
-            O resultado de {n1} x {n2} = {resultado} 
+            O Resultado De {n1} x {n2} = {resultado} 
         ''')
 
-
+    sleep(2)
     # Final
     final = input('''
 
@@ -107,5 +112,11 @@ while programa == True:
     (s) para sim
     (n) para não
     ''')
-    programa = True if final == 's' else False
+
+    if final == 's':
+        programa = True
+    else:
+        print("Volte sempre!")
+        sleep(6)
+        programa = False
 
